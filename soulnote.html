@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Soul Note — 9:11 My Becoming</title>
+  <link rel="stylesheet" href="soulnote.css">
+</head>
+<body>
+  <h1 class="page-title">🌸 Soul Note for You Today</h1>
+
+  <div class="note-container">
+    <div class="note-card" id="noteCard">
+      “Even the stars don’t rush. You’re right on time.”
+    </div>
+    <button class="new-note-btn" onclick="showNewNote()">📝 New Note</button>
+  </div>
+
+  <footer>
+    Made with soul by <strong>BYGART~CREATIVE</strong>
+  </footer>
+
+  <script>
+    const notes = [
+      "“Even the stars don’t rush. You’re right on time.”",
+      "“Rest is not weakness, it’s a sacred strategy.”",
+      "“Your story is still becoming.”",
+      "“Softness is strength in its highest form.”",
+      "“No shadow can swallow your light.”",
+      "“There is meaning even in your pause.”"
+    ];
+
+    function showNewNote() {
+      const noteCard = document.getElementById("noteCard");
+      const random = Math.floor(Math.random() * notes.length);
+      noteCard.innerText = notes[random];
+    }
+  </script>
+</body>
+</html>
+<div class="support-section">
+  <p>
+    If this space has brought you peace or helped your becoming,<br>
+    consider supporting the journey 🌱
+  </p>
+  <a href="https://paystack.com/pay/supportgift" class="support-btn">💖 Support This App</a>
+</div>

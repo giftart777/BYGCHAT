@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>9:11 — My Becoming Journal</title>
+  <link rel="stylesheet" href="journal.css" />
+</head>
+<body>
+
+  <!-- LOCK SCREEN -->
+  <div id="lock-screen">
+    <form id="passcode-form">
+      <h2>Enter Your Passcode 🔐</h2>
+      <input type="password" id="passcode-input" placeholder="Enter your passcode" required />
+      <button type="submit" class="unlock-btn">Unlock</button>
+      <p id="message"></p>
+    </form>
+  </div>
+  <label for="mood-select">🌤️ How do you feel today?</label>
+  <select id="mood-select">
+    <option value="">Select mood</option>
+    <option value="😊 Happy">😊 Happy</option>
+    <option value="😔 Sad">😔 Sad</option>
+    <option value="😠 Angry">😠 Angry</option>
+    <option value="😌 Calm">😌 Calm</option>
+    <option value="😟 Anxious">😟 Anxious</option>
+    <option value="😍 Grateful">😍 Grateful</option>
+    <option value="😴 Tired">😴 Tired</option>
+    <option value="🤯 Overwhelmed">🤯 Overwhelmed</option>
+  </select>
+  <!-- JOURNAL SECTION -->
+  <div id="journal-section" style="display: none;">
+    <h1>📖 My Becoming Journal</h1>
+    <p class="quote" id="daily-quote">🌙 Daily Quote Appears Here...</p>
+    <textarea placeholder="Write from the heart..."></textarea>
+
+    <div class="button-group">
+      <button class="save-note">Save Note</button>
+      <button class="clear-note">Clear</button>
+      <button class="download-note">Download</button>
+    </div>
+
+    <p id="timestamp" class="timestamp"></p>
+    <p class="footer">~ BYGART PRIVATE ENTRY ~</p>
+  </div>
+
+  <script src="journal.js"></script>
+</body>
+</html>

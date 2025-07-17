@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0d0d1f;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.6rem;
+  margin: 25px 0 10px;
+  font-weight: 600;
+  color: #fefefe;
+  text-align: center;
+}
+
+.wallpaper-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wallpaper-card {
+  background: #1a1a2f;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wallpaper-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.wallpaper-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.wallpaper-info h3 {
+  font-size: 1rem;
+  color: #eeeeee;
+  margin: 0;
+  font-weight: 500;
+}
+
+.download-btn {
+  background: linear-gradient(to right, #e4b9fd, #ae86ff);
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+  background: linear-gradient(to right, #ae86ff, #e4b9fd);
+}

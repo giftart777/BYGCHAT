@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta property="og:title" content="9:11 — My Becoming">
+  <meta property="og:description" content="A soulful journaling app with affirmations and chat.">
+  <meta property="og:image" content="https://your-image-link.jpg">
+  <meta property="og:url" content="https://fantastic-profiterole-87ac71.netlify.app/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>9:11 — My Becoming</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🌙 Navigation -->
+  <nav class="soft-nav">
+    <a href="index.html">🏠</a>
+    <a href="journal.html">📓</a>
+    <a href="wallpaper.html">🎨</a>
+    <a href="chat.html">💬</a>
+  </nav>
+  
+  <!-- 💬 Intro Section -->
+  <header class="hero">
+    <h1>9:11 — My Becoming</h1>
+    <p>Guided by light. Strengthened by words.</p>
+  </header>
+  <a href="dashboard.html" class="card">📊 Dashboard</a>
+  <!-- 📓 My Journal Section -->
+  <section id="journal-link">
+    <h2>📓 My Journal</h2>
+    <p>Your private space of reflections and growth.</p>
+    <a class="btn" href="journal.html">Open Journal</a>
+  </section>
+
+  <!-- 🎨 Wallpapers Section -->
+  <section id="wallpaper-link">
+    <h2>🎨 Daily Wallpapers</h2>
+    <p>Motivate your screen. Choose from inspiring designs.</p>
+    <a class="btn" href="wallpaper.html">View Wallpapers</a>
+  </section>
+  <div class="donate-box">
+    ☕ Support this project → 
+    <a href="https://www.buymeacoffee.com/giftart" target="_blank" class="donate-link">
+      Buy me a coffee
+    </a>
+  </div>
+  <!-- 💬 Chat Section -->
+  <section id="chat-link">
+    <h2>💬 My Becoming Chat</h2>
+    <p>Connect gently with trusted words.</p>
+    <a class="btn" href="chat.html">Enter Chat</a>
+  </section>
+  
+  <!-- 🕊️ Soul Note Section -->
+  <section id="soul-note">
+    <h2>🕊️ My Soul Note</h2>
+    <textarea id="soulInput" placeholder="Write your thoughts here..."></textarea>
+    <button onclick="saveSoulNote()">💾 Save Note</button>
+    <p id="saveStatus"></p>
+  </section>
+
+  <!-- 💛 Footer -->
+  <footer>
+    <p>&copy; 2025 BYGART — Made under the moonlight.</p>
+  </footer>
+
+  <!-- 🌒 Scripts -->
+  <script>
+    // Load saved soul note
+    window.onload = function () {
+      const saved = localStorage.getItem("soulNote");
+      if (saved) {
+        document.getElementById("soulInput").value = saved;
+      }
+    };
+
+    function saveSoulNote() {
+      const note = document.getElementById("soulInput").value;
+      localStorage.setItem("soulNote", note);
+      document.getElementById("saveStatus").innerText =
+        "🕊️ Saved to your soul.";
+      setTimeout(() => {
+        document.getElementById("saveStatus").innerText = "";
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
+<a href="https://www.buymeacoffee.com/giftart" target="_blank" class="support-btn">❤️ Support BYGART</a>

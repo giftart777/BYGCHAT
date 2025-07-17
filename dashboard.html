@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard — 9:11</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="background"></div>
+  <header>
+    <h1>📊 My Dashboard</h1>
+    <p class="subtitle">Your soul’s footprint today</p>
+  </header>
+
+  <section class="content">
+    <div class="card">
+      <h2>📝 Last Journal Entry</h2>
+      <p id="lastEntry">No recent entry found.</p>
+    </div>
+
+    <div class="card">
+      <h2>🌟 Today’s Affirmation</h2>
+      <p id="affirmation">You are becoming your best self.</p>
+    </div>
+
+    <div class="card">
+      <h2>📅 Streak</h2>
+      <p id="visitCount">You’ve visited 0 days in a row.</p>
+    </div>
+
+    <div class="card">
+      <h2>🔗 Quick Links</h2>
+      <a href="journal.html" class="button-link">Go to Journal</a>
+      <a href="wallpaper.html" class="button-link">View Wallpapers</a>
+      <a href="chat.html" class="button-link">SoulTalk</a>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+    <a href="index.html">🏠</a>
+    <a href="dashboard.html">📊</a>
+    <a href="journal.html">📝</a>
+    <a href="support.html">☕</a>
+  </nav>
+
+  <script>
+    // Load from localStorage for last entry
+    const lastEntry = localStorage.getItem('journal') || "No recent entry found.";
+    document.getElementById('lastEntry').textContent = lastEntry.slice(0, 120) + "...";
+
+    // Load today's affirmation
+    const affirmations = [
+      "You are becoming your best self.",
+      "Your presence is a gift.",
+      "Stillness is not weakness.",
+      "You are safe in your own growth."
+    ];
+    const todayIndex = new Date().getDate() % affirmations.length;
+    document.getElementById('affirmation').textContent = affirmations[todayIndex];
+
+    // Streak tracking
+    const today = new Date().toDateString();
+    let lastVisit = localStorage.getItem('lastVisit');
+    let streak = parseInt(localStorage.getItem('streak')) || 0;
+
+    if (lastVisit !== today) {
+      streak++;
+      localStorage.setItem('lastVisit', today);
+      localStorage.setItem('streak', streak);
+    }
+
+    document.getElementById('visitCount').textContent = `You’ve visited ${streak} days in a row.`;
+  </script>
+</body>
+</html>

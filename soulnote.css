@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(circle at top, #1c1c30, #0b0b1a);
+  color: #fdfdfd;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 1.8rem;
+  margin: 40px 0 20px;
+  font-weight: 600;
+  color: #fefefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.note-container {
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.note-card {
+  background: #2c2c4a;
+  padding: 40px 30px;
+  border-radius: 20px;
+  font-size: 1.3rem;
+  font-style: italic;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.07);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.new-note-btn {
+  background: #ffbdf7;
+  color: #111;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease;
+}
+
+.new-note-btn:hover {
+  background: #e499f2;
+}
+
+footer {
+  margin: 40px 0 20px;
+  font-size: 0.9rem;
+  color: #999;
+}

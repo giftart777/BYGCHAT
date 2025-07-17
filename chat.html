@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💬 SoulTalk – 9:11</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+</head>
+<body class="moon-theme">
+  
+  <!-- 🔒 Lock Screen -->
+  <div id="lockScreen" style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000000ee;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+    <h3 style="color:white; margin-bottom:1rem;">Enter Passcode to Access SoulTalk</h3>
+    <input type="password" id="chatPass" placeholder="Enter Chat Passcode" style="padding:10px;border:none;border-radius:8px;max-width:200px;text-align:center;">
+    <button onclick="checkPasscode()" style="margin-top:10px;padding:10px 20px;border:none;border-radius:6px;background:white;color:black;font-weight:bold;">Unlock</button>
+  </div>
+
+  <!-- 🌙 SoulTalk Content -->
+  <div class="container">
+    <h2>💬 SoulTalk</h2>
+    <p class="subtitle">Your private sky for honest, soulful messages 🌌</p>
+
+    <div class="chatbox" id="messages"></div>
+
+    <div class="chat-inputs">
+      <input type="text" id="username" placeholder="Name ✨" />
+      <input type="text" id="message" placeholder="Type your message..." />
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <a href="index.html" class="back-home">← Back to Home</a>
+  </div>
+
+  <script>
+    function checkPasscode() {
+      const entered = document.getElementById("chatPass").value;
+      if (entered === "911chat") {
+        document.getElementById("lockScreen").style.display = "none";
+      } else {
+        alert("Wrong passcode. Try again.");
+      }
+    }
+  </script>
+  <script src="chat.js"></script>
+</body>
+</html>
